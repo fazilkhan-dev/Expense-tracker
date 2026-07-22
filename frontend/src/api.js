@@ -1,24 +1,24 @@
 import axios from "axios";
 
+const BASE_URL = "https://expense-tracker-backend-4mhq.onrender.com/api";
+
+// Transactions API
 const API = axios.create({
-  baseURL: "http://localhost:5000/api/transactions",
+  baseURL: `${BASE_URL}/transactions`,
 });
 
-API.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-
-  return config;
-});
-
+// Budget API
 export const budgetAPI = axios.create({
-  baseURL: "http://localhost:5000/api/budgets",
+  baseURL: `${BASE_URL}/budgets`,
 });
 
-budgetAPI.interceptors.request.use((config) => {
+// Auth API
+export const authAPI = axios.create({
+  baseURL: `${BASE_URL}/auth`,
+});
+
+// Attach JWT token automatically
+const attachToken = (config) => {
   const token = localStorage.getItem("token");
 
   if (token) {
@@ -26,6 +26,10 @@ budgetAPI.interceptors.request.use((config) => {
   }
 
   return config;
-});
+};
+
+API.interceptors.request.use(attachToken);
+budgetAPI.interceptors.request.use(attachToken);
+authAPI.interceptors.request.use(attachToken);
 
 export default API;
