@@ -30,9 +30,7 @@ Database
 
 ## Installation
 
-### Clone
 
-git clone https://github.com/yourusername/expense-tracker.git
 
 ### Backend
 
