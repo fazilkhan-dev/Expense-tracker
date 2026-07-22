@@ -1,67 +1,49 @@
-# Expense Tracker
+Expense Tracker
+────────────────────
 
-A modern full-stack Expense Tracker built using React, Node.js, Express, and MongoDB.
+🌐 Live Demo
 
-## Features
-
-✔ User Authentication
-✔ Add Income & Expenses
-✔ Dashboard Analytics
-✔ Charts
-✔ Transaction History
-✔ Responsive UI
-✔ Dark/Light Theme (if added)
-
-## Tech Stack
-
-Frontend
-- React
-- Vite
-- CSS
-- Framer Motion
-- Recharts
+🟢 https://expense-tracker-frontend-roan-alpha.vercel.app
 
 Backend
-- Node.js
-- Express.js
 
-Database
-- MongoDB
+🟢 https://expense-tracker-backend-4mhq.onrender.com
 
-## Installation
+Features
 
+✔ Authentication
+✔ Income
+✔ Expenses
+✔ Dashboard
+✔ Charts
+✔ Budgets
+✔ Responsive
+✔ JWT
 
+Tech Stack
 
-### Backend
+React
+Vite
+Node.js
+Express
+MongoDB
+JWT
+Render
+Vercel
 
-cd server
+Installation
+
+git clone ...
+
 npm install
+
 npm run dev
 
-### Frontend
+Folder Structure
 
-cd client
-npm install
-npm run dev
+frontend/
+backend/
 
-## Environment Variables
+Author
 
-Create a `.env` file inside `server`.
-
-Example:
-
-PORT=5000
-MONGO_URI=your_mongodb_connection
-JWT_SECRET=your_secret
-
-## Screenshots
-
-(Add images here)
-
-## Future Improvements
-
-- Budget Planning
-- Export Reports
-- AI Spending Insights
-- Recurring Transactions
-- Email Reports
+Patan Mahammad Fazil Khan
